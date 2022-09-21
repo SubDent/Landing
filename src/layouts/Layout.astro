@@ -1,0 +1,53 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <style>
+      @import "open-props/style";
+      @import "open-props/normalize";
+      @import "open-props/buttons";
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: linear-gradient(135deg, #132431 0%, #343548 100%);
+          background: linear-gradient(
+            135deg,
+            oklch(19.7% 0.03 254.79) 0%,
+            oklch(25.1% 0.051 254.79) 100%
+          );
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        html {
+          background: linear-gradient(to right bottom, #c9d6ff, #e2e2e2);
+        }
+      }
+
+      html {
+        min-height: 100vh;
+      }
+
+      body {
+        margin: 0;
+        padding-left: var(--size-10);
+      }
+    </style>
+  </body>
+</html>

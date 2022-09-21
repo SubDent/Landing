@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FormList from "../components/ListForm.svelte";
+---
+
+<Layout title="React Here">
+  <h1>Smile</h1>
+  <main>
+    <h2>Making dental payments easier for Dentists</h2>
+  </main>
+  <FormList client:idle />
+  <footer>
+    <p class="copy">
+      &copy; Smile Digital Dental | <a href="/contact">contact</a>
+    </p>
+  </footer>
+  <aside class="project_state">
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+    <span>beta</span>
+  </aside>
+</Layout>
+
+<style>
+  .project_state {
+    overflow: hidden;
+    user-select: none;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    top: 0;
+    left: 2ch;
+  }
+  .project_state span {
+    overflow: hidden;
+    /* opacity: 20%; */
+    text-shadow: 1px 3px 13px rgba(9, 11, 35, 0.919);
+    transform: rotate(270deg);
+    transform-origin: top left;
+  }
+</style>
